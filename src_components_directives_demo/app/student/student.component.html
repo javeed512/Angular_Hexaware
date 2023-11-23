@@ -1,0 +1,54 @@
+<p>student works!</p>
+
+<h1 [ngStyle]="{color:mycolor}">Welcome : {{sname}} </h1>
+
+<form   > 
+
+SID: <input type="text"  name="sid" [value]=sid /> <br>
+SNAME: <input type="text"  name="sname"  [(ngModel)]="sname" /> <br>
+
+Select Item: <select>
+
+                <option  *ngFor="let x of items">{{x}}</option>
+
+            </select>
+
+<button type="submit"  (click)="getData()">GetData</button>
+
+</form>
+
+<br>
+
+<img [src]=imageURL /> <br>
+
+
+<h1 *ngIf="5>3">This is Line1</h1>
+
+<h1 *ngIf=isValid()>This is Line2</h1>
+
+<h1 *ngIf="false">This is  Line3</h1>
+
+
+<table border="1">
+    <tr *ngFor="let item of items"><td>{{item}}</td></tr>
+</table>
+
+
+
+
+<table border="1">
+    <tr *ngFor="let student of studentList">
+        <td>{{student.id}}</td>
+        <td>{{student.sname}}</td>
+        <td>{{student.fee}}</td>
+    </tr>
+</table>
+
+Enter Course: <input type="text" name="course" [(ngModel)]="course" />
+
+<div [ngSwitch]="course">
+<div *ngSwitchCase="'Java'"><img src="../../assets/java.png"></div>
+<div *ngSwitchCase="'Python'"><img src="../../assets/python.png"></div>
+<div *ngSwitchCase="'Mysql'"><img src="../../assets/mysql.png"></div>
+<div *ngSwitchDefault="''"><img src="../../assets/car.jpg"></div>
+</div>
