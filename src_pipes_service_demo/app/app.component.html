@@ -1,0 +1,22 @@
+<h1>App Component</h1>
+
+Salary : {{salary | currency:'INR'}} 
+<br>
+
+Title : {{title | uppercase}}
+
+<br>
+
+Date: {{mydate | date:'fullDate' | uppercase}}
+
+<br>
+
+Slice: {{title | slice:0:3}}
+
+<br>
+
+Square Root : {{ 2016 | sqrt}}
+
+<button type="button"  (click)="getAllProducts()">Get All Products</button>
+
+<h1>{{productList | json}} </h1>
