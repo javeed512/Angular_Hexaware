@@ -1,0 +1,23 @@
+<h1>Login App Component</h1>
+
+<div  class="container  col-lg-4">
+<form   #formData=ngForm  (ngSubmit)="readFormData(formData)" >
+    <div class="form-group">
+      <label for="exampleInputEmail1">Email address</label>
+      <input type="email" class="form-control" name="email"  required  #emailID="ngModel"  ngModel       >
+      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small><br>
+      <span style="color:red"  *ngIf="emailID.touched && emailID.invalid" >Email is required</span>
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">Password</label>
+      <input type="password" class="form-control"  name="password"  required  #pwd="ngModel"   ngModel>
+      <span style="color:red"   *ngIf="pwd.touched && pwd.invalid" >Password is mandartory</span>
+    </div>
+    <div class="form-group form-check">
+      <input type="checkbox" class="form-check-input" id="exampleCheck1"   name="status"  ngModel  >
+      <label class="form-check-label" for="exampleCheck1">Check me out</label>
+    </div>
+    <button type="submit" class="btn btn-primary" [disabled]="formData.invalid"  >Submit</button>
+  </form>
+
+  </div>
