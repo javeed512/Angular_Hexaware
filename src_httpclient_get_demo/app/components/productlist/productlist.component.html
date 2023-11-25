@@ -1,0 +1,12 @@
+<h1>ProductList Component</h1>
+
+<button type="button"  (click)="getAll()">Display All List</button>
+
+<div class="container">
+<table class="table table-primary">
+
+<tr  *ngFor="let productItem of productList">
+    <td>{{productItem.pid}}</td><td>{{productItem.pname}}</td><td>{{productItem.price}}</td>
+</tr>
+
+</table>
