@@ -1,0 +1,15 @@
+What Does Single Page Application Mean and Why Do We Need Single Page Application
+A single-page application is an app that doesn’t need to reload the page during its use and works within a browser. Think of the apps you use daily: Facebook, Google Maps, Gmail, Twitter, Google Drive, or even GitHub. All these are examples of a SPA.
+
+One of the best advantages of a correctly-configured SPA is the user experience (UX), where the user enjoys the natural environment of the app without having to wait for the page reloads and other things. You remain on the same page, which is powered by JavaScript programming language. 
+
+
+Single Page Application Advantages: Why Use Single Page Application?
+The main advantage of single-page applications is their speed. Most resources SPA needs (HTML + CSS + Scripts) are loaded at the launch of the app and don’t need to be reloaded during usage. The only thing that changes is the data that is transmitted to and from the server. As a result, the application is very responsive to the user’s queries and doesn’t have to wait for client-server communication all the time.
+
+
+
+WHEN TO USE A SPA
+You might be asking, “When should I use a single-page application?” When you have a business or a personal website that needs a dynamic platform and small data volume, the single-page application is a good idea. It is also a great option if you are planning to develop a mobile app in the future, since, as we mentioned above, the backend API can be used for both web and mobile apps.
+
+The main drawback is the SEO, but the architecture is suitable for Software-as-a-Service (SaaS) platforms, closed communities, and social networks (which is why Facebook uses it). The reason for this is that these sites don’t need optimization for searches on Google. 

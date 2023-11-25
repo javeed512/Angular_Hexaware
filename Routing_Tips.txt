@@ -1,0 +1,101 @@
+
+Important points about routing:
+
+1.Routing can be done using routerLink attribute in any clickable html elements.
+
+Ex: Buttons,Links
+
+
+<a routerLink="/home">HOME</a>  <br>
+<button type="submit" routerLink= "/contactus/{{username}}"  class="btn btn-primary">Contact</button>
+
+<br>
+<ul>
+
+    <li><a routerLink="/aboutus"  [queryParams]="{city:'hyd',country:'india'}">About Us</a> </li>
+    <li><a routerLink="/callnow">Call Now</a> </li>
+    <li><a routerLink="/">Back to HOME</a> </li>
+
+</ul>  
+
+2.Routing can be perform using  type script code in component class.
+
+Ex:
+home.component.html
+------------------
+
+<button type="submit"  (click)="getPayment()">Pay</button>
+
+
+home.component.ts
+-----------------
+
+	amount:number = 0;
+
+    getPayment(){
+
+        console.log('navigating to payment page from home component');
+
+        this.router.navigate(['/payment/'+this.amount]);    // this navigate method will route request from home page to payment page along with one 								          // parameter amount
+
+    }
+
+
+How to read data from params in destination components (payment.component.ts)
+
+inside payment.component.ts
+============================
+
+  billAmount = 0;
+
+
+  constructor(private  route:ActivatedRoute){
+
+      route.params.subscribe( 
+        (inputs)=>{  this.billAmount = inputs['amount']} 
+        );
+
+  }
+
+
+Note: we can pass  parameters to the routerLink also and can capture using code same as above example.
+
+<button type="submit" routerLink= "/contactus/{{username}}" >Click</button>
+
+
+
+
+
+
+3. We can also pass one or more parameters  using [queryParams]
+
+
+app.component.html (routing component)
+
+<a routerLink="/aboutus"  [queryParams]="{city:'hyd',country:'india'}">About Us</a>
+
+
+
+about.component.ts
+
+paramList:any = [];
+
+  constructor(private route:ActivatedRoute){
+
+      this.route.queryParams.subscribe( 
+            (inputs) => {
+                this.paramList = inputs; 
+                  console.log(this.paramList)
+          
+             } );
+
+            
+
+  }
+
+
+
+
+
+
+

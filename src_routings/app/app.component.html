@@ -1,0 +1,16 @@
+<h1>App Component</h1>
+
+<a routerLink="/home">HOME</a>  <br>
+<button type="submit" routerLink= "/contactus/{{username}}"  class="btn btn-primary">Contact</button>
+
+<br>
+<ul>
+
+    <li><a routerLink="/aboutus"  [queryParams]="{city:'hyd',country:'india'}">About Us</a> </li>
+    <li><a routerLink="/callnow">Call Now</a> </li>
+    <li><a routerLink="/">Back to HOME</a> </li>
+
+</ul>  
+
+
+<router-outlet></router-outlet>
