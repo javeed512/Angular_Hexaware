@@ -1,0 +1,40 @@
+<p>dashboard works!</p>
+
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary col-md-6">
+    <div class="container-fluid">
+     
+      <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="addemployee">AddEmployee</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="displayall">View All</a>
+          </li>
+        </ul>
+        <nav class="navbar navbar-light bg-light">
+          <div class="container-fluid">
+            <form class="d-flex"  #searchInput="ngForm" (ngSubmit)="find(searchInput)">
+              <input class="form-control me-2" type="search" name="data"  ngModel  placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </nav>
+
+        
+      </div>
+    </div>
+  </nav>
+
+
+
+
+
+  <router-outlet></router-outlet>
+
+
+ 

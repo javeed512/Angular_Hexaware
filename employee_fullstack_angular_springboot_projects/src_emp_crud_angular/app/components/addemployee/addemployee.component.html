@@ -1,0 +1,32 @@
+<p>addemployee works!</p>
+
+
+<form  #myform="ngForm"  method="post"  class="container col-md-4" (ngSubmit)="insertEmployee(myform.value)">
+    <!-- <div class="form-group">
+    <label>Eid:</label><input type="number" class="form-control"  name="id"  #eidcontrol="ngModel"   required  ngModel>
+    <span  style="color: red;"  *ngIf="eidcontrol.touched && eidcontrol.invalid">Eid is Mandatory</span>
+    </div> -->
+    
+    <div class="form-group">
+    <label>EName:</label><input type="text" class="form-control"  #enamecontrol="ngModel" name="ename"  required ngModel>
+    <span  style="color: red;"  *ngIf="enamecontrol.touched && enamecontrol.invalid">Emp Name is Mandatory</span>
+    </div>
+    
+    
+    <div class="form-group">
+    <label>Salary:</label><input type="number"  class="form-control" #salcontrol="ngModel" name="salary"  required ngModel>
+    <span  style="color: red;"  *ngIf="salcontrol.touched && salcontrol.invalid">Salary is Mandatory</span>
+    </div>
+    
+    <div class="form-group">
+        <label>DOJ:</label><input type="date"  class="form-control" #dojcontrol="ngModel" name="doj"  required ngModel>
+        <span  style="color: red;"  *ngIf="dojcontrol.touched && dojcontrol.invalid">DOJ is Mandatory</span>
+        </div>
+        
+    
+    
+    <button type="submit"  class="btn btn-primary" [disabled]="myform.invalid" >Submit</button>
+    
+    
+    </form>
+    
