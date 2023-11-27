@@ -1,0 +1,30 @@
+<p>update works!</p>
+
+
+
+<h1>Update Employee Form</h1>
+
+
+<form  #myform="ngForm"  method="post"  class="container col-md-4" (ngSubmit)="updateFormData(myform.value)">
+   <div class="form-group">
+   <label>Eid:</label><input type="number" class="form-control"  name="id"  #eidcontrol="ngModel"   required  ngModel>
+   <span  style="color: red;"  *ngIf="eidcontrol.touched && eidcontrol.invalid">Eid is Mandatory</span>
+   </div>
+   
+   <div class="form-group">
+   <label>EName:</label><input type="text" class="form-control"  #enamecontrol="ngModel" name="ename"  required ngModel>
+   <span  style="color: red;"  *ngIf="enamecontrol.touched && enamecontrol.invalid">Emp Name is Mandatory</span>
+   </div>
+   
+   
+   <div class="form-group">
+   <label>Salary:</label><input type="number"  class="form-control" #salcontrol="ngModel" name="salary"  required ngModel>
+   <span  style="color: red;"  *ngIf="salcontrol.touched && salcontrol.invalid">Salary is Mandatory</span>
+   </div>
+   
+   
+   
+   <button type="submit"  class="btn btn-warning" [disabled]="myform.invalid" >UPDATE</button>
+   
+   
+   </form>
