@@ -1,0 +1,67 @@
+Angular 17
+
+1. Standalone components
+ 
+> ng g c  comp-name  --standalone
+
+Ex:  ng g c hello  --standalone
+
+@Component({
+  selector: 'app-hello',
+  standalone: true,
+  imports: [CommonModule],
+  templateUrl: './hello.component.html',
+  styleUrl: './hello.component.css',
+  providers:[]
+})
+export class HelloComponent {
+
+}
+
+Note: They remove app.module.ts all imports can be done in standalone componets and also they remove import[] ,export[] options from app.routes.ts  (only routing configuration we can do in app.route.ts)
+
+They added new file known as app.config.ts (where routes is configured )
+
+
+
+2. They added new control structures in Angular-17
+
+
+@if ,@else if , @else 
+@for
+@swtich , @case , @default
+
+@defer
+
+
+3.Signals
+
+What are signals?
+A signal is a wrapper around a value that can notify interested consumers when that value changes. Signals can contain any value, from simple primitives to complex data structures.
+
+A signal's value is always read through a getter function, which allows Angular to track where the signal is used.
+
+Signals may be either writable or read-only.
+
+Ex:
+
+const count = signal(0);
+
+
+count.set(100);
+
+count.update(value => value + 1);
+
+
+Effects
+Signals are useful because they can notify interested consumers when they change. An effect is an operation that runs whenever one or more signal values change. You can create an effect with the effect function:
+
+content_copy
+effect(() => {
+  console.log(`The current count is: ${count()}`);
+});
+
+
+
+
+
